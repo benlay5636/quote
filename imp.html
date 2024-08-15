@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Positive Comment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f8ff;
+            text-align: center;
+        }
+        .comment-box {
+            border: 2px solid #4caf50;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4caf50;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="comment-box">
+        <h1>Daily Positive Comment</h1>
+        <p id="comment">Click the button to get your positive comment!</p>
+        <button onclick="generateComment()">Get Comment</button>
+    </div>
+
+    <script>
+        const comments = [
+            "You are capable of amazing things!",
+            "Believe in yourself and all that you are.",
+            "Your potential is endless.",
+            "You are doing great, keep it up!",
+            "Every day may not be good, but there is something good in every day."
+        ];
+
+        function generateComment() {
+            const randomIndex = Math.floor(Math.random() * comments.length);
+            document.getElementById("comment").innerText = comments[randomIndex];
+        }
+    </script>
+</body>
+</html>
